@@ -1,0 +1,43 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega324PA"</DEVICE>
+ <WORKING_DIR>D:\Microprocessor ATmega324P Projects\LAB 4\LAB 4_2.1_Nguyen Ngoc Khanh_2111474\LAB 4_2.1_Nguyen Ngoc Khanh\LAB 4_2.1_Nguyen Ngoc Khanh\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>D:\Microprocessor ATmega324P Projects\LAB 4\LAB 4_2.1_Nguyen Ngoc Khanh_2111474\LAB 4_2.1_Nguyen Ngoc Khanh\LAB 4_2.1_Nguyen Ngoc Khanh\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m324PAdef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>D:\Microprocessor ATmega324P Projects\LAB 4\LAB 4_2.1_Nguyen Ngoc Khanh_2111474\LAB 4_2.1_Nguyen Ngoc Khanh\LAB 4_2.1_Nguyen Ngoc Khanh\Debug\LAB 4_2.1_Nguyen Ngoc Khanh.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>LAB 4_2.1_Nguyen Ngoc Khanh.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>LAB 4_2.1_Nguyen Ngoc Khanh.map</FILE>
+  <FILE>LAB 4_2.1_Nguyen Ngoc Khanh.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <MAIN><FILE>D:\Microprocessor ATmega324P Projects\LAB 4\LAB 4_2.1_Nguyen Ngoc Khanh_2111474\LAB 4_2.1_Nguyen Ngoc Khanh\LAB 4_2.1_Nguyen Ngoc Khanh\main.asm</FILE><LINE>51</LINE></MAIN>
+  <START0><FILE>D:\Microprocessor ATmega324P Projects\LAB 4\LAB 4_2.1_Nguyen Ngoc Khanh_2111474\LAB 4_2.1_Nguyen Ngoc Khanh\LAB 4_2.1_Nguyen Ngoc Khanh\main.asm</FILE><LINE>67</LINE></START0>
+  <START><FILE>D:\Microprocessor ATmega324P Projects\LAB 4\LAB 4_2.1_Nguyen Ngoc Khanh_2111474\LAB 4_2.1_Nguyen Ngoc Khanh\LAB 4_2.1_Nguyen Ngoc Khanh\main.asm</FILE><LINE>78</LINE></START>
+  <STOP_MOTOR><FILE>D:\Microprocessor ATmega324P Projects\LAB 4\LAB 4_2.1_Nguyen Ngoc Khanh_2111474\LAB 4_2.1_Nguyen Ngoc Khanh\LAB 4_2.1_Nguyen Ngoc Khanh\main.asm</FILE><LINE>93</LINE></STOP_MOTOR>
+  <REVERSE><FILE>D:\Microprocessor ATmega324P Projects\LAB 4\LAB 4_2.1_Nguyen Ngoc Khanh_2111474\LAB 4_2.1_Nguyen Ngoc Khanh\LAB 4_2.1_Nguyen Ngoc Khanh\main.asm</FILE><LINE>89</LINE></REVERSE>
+  <CONTINUE><FILE>D:\Microprocessor ATmega324P Projects\LAB 4\LAB 4_2.1_Nguyen Ngoc Khanh_2111474\LAB 4_2.1_Nguyen Ngoc Khanh\LAB 4_2.1_Nguyen Ngoc Khanh\main.asm</FILE><LINE>103</LINE></CONTINUE>
+  <GET_SW><FILE>D:\Microprocessor ATmega324P Projects\LAB 4\LAB 4_2.1_Nguyen Ngoc Khanh_2111474\LAB 4_2.1_Nguyen Ngoc Khanh\LAB 4_2.1_Nguyen Ngoc Khanh\main.asm</FILE><LINE>136</LINE></GET_SW>
+  <SW2_CHK><FILE>D:\Microprocessor ATmega324P Projects\LAB 4\LAB 4_2.1_Nguyen Ngoc Khanh_2111474\LAB 4_2.1_Nguyen Ngoc Khanh\LAB 4_2.1_Nguyen Ngoc Khanh\main.asm</FILE><LINE>118</LINE></SW2_CHK>
+  <UP_SP><FILE>D:\Microprocessor ATmega324P Projects\LAB 4\LAB 4_2.1_Nguyen Ngoc Khanh_2111474\LAB 4_2.1_Nguyen Ngoc Khanh\LAB 4_2.1_Nguyen Ngoc Khanh\main.asm</FILE><LINE>114</LINE></UP_SP>
+  <DWN_SP><FILE>D:\Microprocessor ATmega324P Projects\LAB 4\LAB 4_2.1_Nguyen Ngoc Khanh_2111474\LAB 4_2.1_Nguyen Ngoc Khanh\LAB 4_2.1_Nguyen Ngoc Khanh\main.asm</FILE><LINE>126</LINE></DWN_SP>
+  <BACK0><FILE>D:\Microprocessor ATmega324P Projects\LAB 4\LAB 4_2.1_Nguyen Ngoc Khanh_2111474\LAB 4_2.1_Nguyen Ngoc Khanh\LAB 4_2.1_Nguyen Ngoc Khanh\main.asm</FILE><LINE>138</LINE></BACK0>
+  <WAIT0><FILE>D:\Microprocessor ATmega324P Projects\LAB 4\LAB 4_2.1_Nguyen Ngoc Khanh_2111474\LAB 4_2.1_Nguyen Ngoc Khanh\LAB 4_2.1_Nguyen Ngoc Khanh\main.asm</FILE><LINE>140</LINE></WAIT0>
+  <EXIT_SW><FILE>D:\Microprocessor ATmega324P Projects\LAB 4\LAB 4_2.1_Nguyen Ngoc Khanh_2111474\LAB 4_2.1_Nguyen Ngoc Khanh\LAB 4_2.1_Nguyen Ngoc Khanh\main.asm</FILE><LINE>168</LINE></EXIT_SW>
+  <BACK1><FILE>D:\Microprocessor ATmega324P Projects\LAB 4\LAB 4_2.1_Nguyen Ngoc Khanh_2111474\LAB 4_2.1_Nguyen Ngoc Khanh\LAB 4_2.1_Nguyen Ngoc Khanh\main.asm</FILE><LINE>148</LINE></BACK1>
+  <WAIT1><FILE>D:\Microprocessor ATmega324P Projects\LAB 4\LAB 4_2.1_Nguyen Ngoc Khanh_2111474\LAB 4_2.1_Nguyen Ngoc Khanh\LAB 4_2.1_Nguyen Ngoc Khanh\main.asm</FILE><LINE>150</LINE></WAIT1>
+  <SW2_CODE><FILE>D:\Microprocessor ATmega324P Projects\LAB 4\LAB 4_2.1_Nguyen Ngoc Khanh_2111474\LAB 4_2.1_Nguyen Ngoc Khanh\LAB 4_2.1_Nguyen Ngoc Khanh\main.asm</FILE><LINE>162</LINE></SW2_CODE>
+  <SET_FLG><FILE>D:\Microprocessor ATmega324P Projects\LAB 4\LAB 4_2.1_Nguyen Ngoc Khanh_2111474\LAB 4_2.1_Nguyen Ngoc Khanh\LAB 4_2.1_Nguyen Ngoc Khanh\main.asm</FILE><LINE>166</LINE></SET_FLG>
+ </LABELS>
+</ASSEMBLER_INFO>

@@ -1,0 +1,40 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega324PA"</DEVICE>
+ <WORKING_DIR>D:\Microprocessor ATmega324P Projects\LAB 2\LAB 2_1.4.2_Nguyen Ngoc Khanh_2111474\LAB 2_1.4.2_Nguyen Ngoc Khanh\LAB 2_1.4.2_Nguyen Ngoc Khanh\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>D:\Microprocessor ATmega324P Projects\LAB 2\LAB 2_1.4.2_Nguyen Ngoc Khanh_2111474\LAB 2_1.4.2_Nguyen Ngoc Khanh\LAB 2_1.4.2_Nguyen Ngoc Khanh\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m324PAdef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>D:\Microprocessor ATmega324P Projects\LAB 2\LAB 2_1.4.2_Nguyen Ngoc Khanh_2111474\LAB 2_1.4.2_Nguyen Ngoc Khanh\LAB 2_1.4.2_Nguyen Ngoc Khanh\Debug\LAB 2_1.4.2_Nguyen Ngoc Khanh.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>LAB 2_1.4.2_Nguyen Ngoc Khanh.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>LAB 2_1.4.2_Nguyen Ngoc Khanh.map</FILE>
+  <FILE>LAB 2_1.4.2_Nguyen Ngoc Khanh.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <MAIN><FILE>D:\Microprocessor ATmega324P Projects\LAB 2\LAB 2_1.4.2_Nguyen Ngoc Khanh_2111474\LAB 2_1.4.2_Nguyen Ngoc Khanh\LAB 2_1.4.2_Nguyen Ngoc Khanh\main.asm</FILE><LINE>14</LINE></MAIN>
+  <START><FILE>D:\Microprocessor ATmega324P Projects\LAB 2\LAB 2_1.4.2_Nguyen Ngoc Khanh_2111474\LAB 2_1.4.2_Nguyen Ngoc Khanh\LAB 2_1.4.2_Nguyen Ngoc Khanh\main.asm</FILE><LINE>31</LINE></START>
+  <CHANGE><FILE>D:\Microprocessor ATmega324P Projects\LAB 2\LAB 2_1.4.2_Nguyen Ngoc Khanh_2111474\LAB 2_1.4.2_Nguyen Ngoc Khanh\LAB 2_1.4.2_Nguyen Ngoc Khanh\main.asm</FILE><LINE>37</LINE></CHANGE>
+  <WAVE_B><FILE>D:\Microprocessor ATmega324P Projects\LAB 2\LAB 2_1.4.2_Nguyen Ngoc Khanh_2111474\LAB 2_1.4.2_Nguyen Ngoc Khanh\LAB 2_1.4.2_Nguyen Ngoc Khanh\main.asm</FILE><LINE>39</LINE></WAVE_B>
+  <WAIT_B_H><FILE>D:\Microprocessor ATmega324P Projects\LAB 2\LAB 2_1.4.2_Nguyen Ngoc Khanh_2111474\LAB 2_1.4.2_Nguyen Ngoc Khanh\LAB 2_1.4.2_Nguyen Ngoc Khanh\main.asm</FILE><LINE>43</LINE></WAIT_B_H>
+  <WAIT_B_L><FILE>D:\Microprocessor ATmega324P Projects\LAB 2\LAB 2_1.4.2_Nguyen Ngoc Khanh_2111474\LAB 2_1.4.2_Nguyen Ngoc Khanh\LAB 2_1.4.2_Nguyen Ngoc Khanh\main.asm</FILE><LINE>51</LINE></WAIT_B_L>
+  <AGAIN><FILE>D:\Microprocessor ATmega324P Projects\LAB 2\LAB 2_1.4.2_Nguyen Ngoc Khanh_2111474\LAB 2_1.4.2_Nguyen Ngoc Khanh\LAB 2_1.4.2_Nguyen Ngoc Khanh\main.asm</FILE><LINE>78</LINE></AGAIN>
+  <CHANGE_RULE><FILE>D:\Microprocessor ATmega324P Projects\LAB 2\LAB 2_1.4.2_Nguyen Ngoc Khanh_2111474\LAB 2_1.4.2_Nguyen Ngoc Khanh\LAB 2_1.4.2_Nguyen Ngoc Khanh\main.asm</FILE><LINE>70</LINE></CHANGE_RULE>
+  <CONTI><FILE>D:\Microprocessor ATmega324P Projects\LAB 2\LAB 2_1.4.2_Nguyen Ngoc Khanh_2111474\LAB 2_1.4.2_Nguyen Ngoc Khanh\LAB 2_1.4.2_Nguyen Ngoc Khanh\main.asm</FILE><LINE>64</LINE></CONTI>
+  <CHANGE_VALUE><FILE>D:\Microprocessor ATmega324P Projects\LAB 2\LAB 2_1.4.2_Nguyen Ngoc Khanh_2111474\LAB 2_1.4.2_Nguyen Ngoc Khanh\LAB 2_1.4.2_Nguyen Ngoc Khanh\main.asm</FILE><LINE>75</LINE></CHANGE_VALUE>
+  <CAU_A><FILE>D:\Microprocessor ATmega324P Projects\LAB 2\LAB 2_1.4.2_Nguyen Ngoc Khanh_2111474\LAB 2_1.4.2_Nguyen Ngoc Khanh\LAB 2_1.4.2_Nguyen Ngoc Khanh\main.asm</FILE><LINE>82</LINE></CAU_A>
+  <DATA_A><FILE>D:\Microprocessor ATmega324P Projects\LAB 2\LAB 2_1.4.2_Nguyen Ngoc Khanh_2111474\LAB 2_1.4.2_Nguyen Ngoc Khanh\LAB 2_1.4.2_Nguyen Ngoc Khanh\main.asm</FILE><LINE>104</LINE></DATA_A>
+  <WAVE_A><FILE>D:\Microprocessor ATmega324P Projects\LAB 2\LAB 2_1.4.2_Nguyen Ngoc Khanh_2111474\LAB 2_1.4.2_Nguyen Ngoc Khanh\LAB 2_1.4.2_Nguyen Ngoc Khanh\main.asm</FILE><LINE>86</LINE></WAVE_A>
+  <WAIT_A><FILE>D:\Microprocessor ATmega324P Projects\LAB 2\LAB 2_1.4.2_Nguyen Ngoc Khanh_2111474\LAB 2_1.4.2_Nguyen Ngoc Khanh\LAB 2_1.4.2_Nguyen Ngoc Khanh\main.asm</FILE><LINE>90</LINE></WAIT_A>
+ </LABELS>
+</ASSEMBLER_INFO>

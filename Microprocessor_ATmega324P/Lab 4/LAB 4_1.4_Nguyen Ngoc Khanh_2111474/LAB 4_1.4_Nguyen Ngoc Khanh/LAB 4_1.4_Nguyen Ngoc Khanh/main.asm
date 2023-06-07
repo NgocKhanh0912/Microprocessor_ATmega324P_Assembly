@@ -1,0 +1,363 @@
+;
+; LAB 4_1.4_Nguyen Ngoc Khanh.asm
+;
+; Created: 5/7/2023 2:43:04 AM
+; 
+;
+; ket noi cac tin hieu de dieu khien lcd ki tu
+; ket noi tin hieu UART ra khoi RS232 va ket noi day USB - Serial
+; viet chuong trinh nhan ky tu tu UART su dung interrupt
+; xuat ki tu do ra LCD o vi tri dau tien ben trai
+; dem so ky tu nhan duoc va xuat ra 4 LED 7 doan, khi nhan duoc hon 1000 ki tu thi reset ve 0
+
+; TXD (PD1) VA RXD (PD0) CAM VAO TIN HIEU UART_TxD0 VA UART_RxD0 TREN HEADER J85
+; PORTA CAM VAO LCD PA4:7 TUONG THICH VOI LCD4:7 , PA0 RS, PA1 RW, PA2 E
+; PORT B KET NOI VOI J34 LED
+; PC0:1 NOI VOI NLE0 VA NLE1
+         
+                .DEF FLAG = R23 ; CO LENH BAO HIEU DA NGAT
+	        .DEF DATA_REC = R22 ; R20 CHUA KI TU NHAN DUOC (ASCII)
+	        ; DEM SO LAN NHAN KI TU DUOC LUU O R25:R24
+	        .EQU LCD = PORTA ; PORTA HIEN THI LCD
+		.EQU LCD_DR = DDRA
+		.EQU LED = PORTB
+		.EQU LED_DR = DDRB
+		.EQU RS = 0 ; BIT RS PA0
+		.EQU RW = 1 ; BIT RW PA1
+		.EQU E = 2 ; BIT E PA2
+		.EQU DATA = 0X200 ; LUU DATA VUA NHAN DUOC VAO FLASH DE TRUY XUAT RA LCD
+		.EQU SR_ADR = 0X100 ; LUU SO DEM VAO SRAM DE TRUY XUAT RA LED
+		.ORG 0
+		RJMP START
+		.ORG 0X28
+		RJMP USART0_RX ; NGAT LUC NHAN KI TU XONG
+		.ORG 0X40 ; DUA CHUONG TRINH CHINH THOAT RA KHOI VUNG INTERRUPTS
+START:  
+                LDI R16, HIGH(RAMEND)
+		OUT SPH, R16
+		LDI R16, LOW(RAMEND) ; DUA STACK LEN DIA CHI CAO
+		OUT SPL, R16
+
+		CLR R24 ; BIEN DEM SO KI TU BAN DAU = 0
+		CLR R25
+		
+		LDI R16, 0XFF
+		OUT LED_DR, R16 ; PORTB LA PORT XUAT RA LED
+		LDI R16, 0XFF
+		OUT DDRC, R16 ; PORTC LA PORT XUAT TIN HIEU LE01
+		CBI PORTC, 0 ; KHOA NGO RA U2
+	        CBI PORTC, 1 ; KHOA NGO RA U3
+
+		; KHOI DONG LCD
+
+		LDI R16, 0XFF
+		OUT LCD_DR, R16 ; PORTA LA PORT XUAT RA LCD
+
+		LDI R16, 0X00
+		OUT LCD, R16 ; GIA TRI BAN DAU PORTA = 0
+		LDI R16, 250
+		RCALL DELAY_US ; CTC DELAY 100US X R16 = 25MS
+		LDI R16, 250
+		RCALL DELAY_US ; CTC DELAY 100US X R16 = 25MS
+
+		CBI LCD, RS ; RS = 0 GHI LENH
+		LDI R17, 0X30 ; MA LENH 30 LAN 1
+		RCALL OUT_LCD4
+		LDI R16, 42
+		RCALL DELAY_US ; DELAY 4,2MS
+
+		CBI LCD, RS ; RS = 0 GHI LENH
+		LDI R17, 0X30 ; MA LENH 30 LAN 2
+		RCALL OUT_LCD4
+		LDI R16, 2
+		RCALL DELAY_US ; DELAY 200US
+
+		CBI LCD, RS ; RS = 0 GHI LENH
+		LDI R17, 0X30 ; MA LENH 30 LAN 3
+		RCALL OUT_LCD4
+		LDI R16, 2
+		RCALL DELAY_US ; DELAY 200US
+
+		CBI LCD, RS ; RS = 0 GHI LENH
+		LDI R17, 0X20 ; MA LENH 20 
+		RCALL OUT_LCD4
+
+		LDI R18, 0X28 ; FUNCTION SET 2 DONG FONT 5X8 MODE 4 BIT
+		LDI R19, 0X01 ; CLEAR DISPLAY
+		LDI R20, 0X0C ; DISPLAY ON, CON TRO OFF
+		LDI R21, 0X06 ; ENTRY MODE SET DICH PHAI CON TRO, DDRAM TANG 1 DIA CHI
+		RCALL INIT_LCD4 ; CTC KHOI DONG LCD 4 BIT
+
+		LDI R16, 0X30
+		LDI XH, HIGH(DATA)
+		LDI XL, LOW(DATA)
+		ST X, R16 ; BAN DAU USART CHUA NHAN GIA TRI, CHO = 0 (0X30 TRONG MA ASCII)
+
+		SEI ; CHO PHEP NGAT TOAN CUC
+		RCALL USART_INIT ; KHOI DONG USART
+
+MAIN: 	
+                PUSH R24
+                PUSH R25
+
+                RCALL BIN16_BCD
+                RCALL SCAN_4LA
+
+		POP R25
+		POP R24
+
+                CBI LCD, RS ; RS = 0 GHI LENH
+                LDI R17, 0X01 ; XOA MAN HINH
+		RCALL OUT_LCD
+		LDI R16, 20 ; CHO 2MS
+		RCALL DELAY_US
+
+	        LDI R17, 0X0C ; XOA CON TRO
+                CBI LCD, RS
+		LDI R16, 1 ; CHO 100US
+		RCALL DELAY_US
+		RCALL OUT_LCD
+
+		LDI R17, 0X80 ; CON TRO BAT DAU O VI TRI 1 DONG 1
+		RCALL CURS_POS ; DAT CON TRO RA LCD
+		LDI XH, HIGH(DATA)
+		LDI XL, LOW(DATA)
+LINE1:  
+                LD R17, X
+                SBI LCD, RS ; RS = 1 GHI DATA
+	 	RCALL OUT_LCD
+                LDI R16, 1 
+                RCALL DELAY_US ; CHO 100US
+                RJMP MAIN
+    
+;-----------------------------------------------------------------------
+USART_INIT:
+		LDI R16, (1 << RXEN0) | (1 << RXCIE0) ; CHO PHEP BO THU VA NGAT LUC THU XONG
+		STS UCSR0B, R16
+
+		LDI R16, (1 << UCSZ01) | (1 << UCSZ00) ; 8 BIT DATA/KHONG KT CHAN LE/1 STOP BIT
+		STS UCSR0C, R16
+
+		LDI R16, 0
+		STS UBRR0H, R16
+		LDI R16, 51 ; BAUD RATE = 9600 UNG VOI FOSC = 8MHZ
+		STS UBRR0L, R16
+		RET
+
+;-----------------------------------------------------------------------
+; NGAT KHI NHAN DUOC KI TU
+USART0_RX:
+		LDS DATA_REC, UDR0 ; NAP DU LIEU TU UDR0 VAO DATA_REC
+
+                LDI XH, HIGH(DATA)
+                LDI XL, LOW(DATA)
+
+                ST X, DATA_REC ; LUU KI TU VUA NHAN DUOC VAO SRAM
+		ADIW R24, 1 ; TANG SO DEM LEN 1
+		CPI R24, 232 ; NEU SO DEM = 1000 THI RESET LAI VE 0
+		BRNE RETURN
+		CPI R25, 3
+		BRNE RETURN
+		CLR R24
+		CLR R25
+  RETURN:      
+                RETI
+
+
+;-------------------------------------------------------------------------
+; DELAY 100US X R16
+; INPUT: R16
+; OUTPUT: DELAY
+DELAY_US:
+                MOV R15, R16 ; NAP DATA CHO R15
+		LDI R16, 200
+L1:             MOV R14, R16 ; NAP DATA CHO R14
+L2:             DEC R14
+                NOP
+		BRNE L2
+		DEC R15
+		BRNE L1
+		RET
+
+;-------------------------------------------------------------
+;---------------------------------------------------------------------
+; INIT LCD4 KHOI DONG LCD GHI 4 BYTE MA LENH THEO GIAO TIEP 4 BIT
+; FUNCTION SET R18 = 0X28 2 DONG FONT 5X8 GIAO TIEP 4 BIT
+; CLEAR DISPLAY R19 = 0X01 XOA MAN HINH
+; DISPLAY ON/OFF CONTROL R20 = 0X0C MAN HINH ON, CON TRO OFF
+; RENTRY MODE SET R21 = 0X06 DICH PHAI CON TRO , DC DDRAM TANG LEN 1 DVI
+
+INIT_LCD4:
+         CBI LCD, RS ; GHI LENH
+	 MOV R17, R18
+	 RCALL OUT_LCD
+
+	 MOV R17, R19
+	 RCALL OUT_LCD
+	 LDI R16, 20
+	 RCALL DELAY_US
+
+	 MOV R17, R20
+	 RCALL OUT_LCD
+
+	 MOV R17, R21
+	 RCALL OUT_LCD
+	 RET
+
+;--------------------------------------------------------
+; OUT LCD4 GHI MA LENH/ DATA RA LCD
+; INPUT R17 CHUA MA LENH/ DATA 4 BIT CAO
+OUT_LCD4:         OUT LCD, R17
+                  SBI LCD, E
+		  CBI LCD, E
+		  RET
+
+;------------------------------------------------------------
+; OUT_LCD GHI 1 BYTE MA LENH/DATA RA LCD
+; CHIA LAM 2 LAN GHI 4 BIT
+; INPUT R17 CHUA MA LENH/DATA
+; RS =0/1 LENH/DATA
+; RW = 0 GHI
+; SU DUNG OUT_LCD4
+OUT_LCD:         LDI R16, 1 
+                 RCALL DELAY_US
+		 IN R16, LCD ; DOC PORT LCD
+		 ANDI R16, (1 << RS) ; LOC BIT RS
+		 PUSH R16
+		 PUSH R17
+		 ANDI R17, 0XF0 ; LAY 4 BIT CAO
+		 OR R17, R16 ; GHEP BIT RS
+		 RCALL OUT_LCD4 ; GHI RA LCD
+		 LDI R16, 1
+		 RCALL DELAY_US
+		 POP R17
+		 POP R16
+		 SWAP R17
+		 ANDI R17, 0XF0 ; LAY 4 BIT THAP CHUYEN THANH CAO
+		 OR R17, R16 ; GHEP BIT RS
+		 RCALL OUT_LCD4 ; GHI RA LCD
+		 RET
+
+
+;------------------------------------------------------------------------------
+; CURS_POS DAT CON TRO TAI DIA CHI CO TRONG R17
+CURS_POS:
+                LDI R16, 1
+		RCALL DELAY_US
+		CBI LCD, RS ; GHI LENH
+		RCALL OUT_LCD
+		RET
+
+;-------------------------------------------------------------------------------
+; INPUT R17 LA SO CAN LAY MA 7 DOAN
+GET_7SEG:         LDI ZH, HIGH(TAB << 1)
+                  LDI ZL, LOW(TAB << 1)
+		  ADD R30, R17 ; CONG OFFSET VAO ZL
+		  LDI R17, 0
+		  ADC R31, R17 ; CONG CARRY NEU CO
+		  LPM R17, Z ; LAY MA 7 DOAN
+		  RET
+
+;---------------------------------------------------------------------
+; MA LED 7 DOAN
+
+TAB: .DB 0XC0,0XF9,0XA4,0XB0,0X99,0X92,0X82,0XF8,0X80,0X90,0X88,0X83
+     .DB 0XC6,0XA1,0X86,0X8E
+
+
+;------------------------------------------------
+; BIN16_BCD CHUYEN SO NHI PHAN 16 BIT SANG SO BCD 4 DIGIT
+; INPUT R25:R24 = SO NHI PHAN 16 BIT
+; OUTPUT R21, R20 = BCD NEN, R21 TRONG SO CAO
+; SU DUNG CTC DIV16_8 , 10 = SO CHIA
+BIN16_BCD:         CLR R20
+                   CLR R21
+		   RCALL DIV16_8
+		   MOV R20, R16 ; R20 = DU : BCD DON VI
+		   RCALL DIV16_8
+		   SWAP R16 ; BCD CHUC LEN 4 BIT CAO
+		   OR R20, R16 ; GHEP BCD NEN
+		   RCALL DIV16_8 ; BCD TRAM
+		   MOV R21, R16
+		   RCALL DIV16_8 ; BCD NGAN
+		   SWAP R16
+		   OR R21, R16
+		   RET
+;-------------------------------------------------
+; DIV16_8 CHIA 2 SO NHI PHAN 16 BIT CHO 8 BIT
+; INPUT R25:R24 LA SO BI CHIA, SO CHIA = 10
+; OUTPUT R25:R24 = THUONG SO, R16 LA DU SO
+; SD R28:R29 DE CAT THUONG SO TAM
+DIV16_8: 
+             CLR R28
+             CLR R29
+GT_DV: 
+             SBIW R24, 10
+             BRCS LT_DV ; C = 1 KHONG CHIA DUOC
+	     ADIW R28, 1
+	     RJMP GT_DV
+LT_DV: 
+             ADIW R24, 10 ; LAY LAI DU SO
+             MOV R16, R24 ; R16 = DU SO
+	     MOVW R24, R28 ; R25:R24 = THUONG SO
+	     RET
+
+;-------------------------------------------------
+; BCD_UNP TACH SO BCD NEN THANH KHONG NEN
+; INPUT R20 = SO BCD NEN CHUC - DON VI
+;       R21 = SO BCD NEN NGAN - TRAM
+; OUTPUT CAT VAO 4 O NHO DAU SRAM
+BCD_UNP: 
+                 LDI XH, HIGH(SR_ADR)
+                 LDI XL, LOW(SR_ADR) 
+
+		 MOV R17, R20 ; LAY BCD NEN TRONG SO THAP
+		 ANDI R17, 0X0F ; LAY BCD DON VI
+		 ST X+, R17
+
+		 MOV R17, R20
+		 SWAP R17
+		 ANDI R17, 0X0F ; LAY BCD CHUC
+		 ST X+, R17
+
+		 MOV R17, R21 ; LAY BCD NEN TRONG SO CAO
+		 ANDI R17, 0X0F ; LAY BCD TRAM
+		 ST X+, R17
+
+		 MOV R17, R21
+		 SWAP R17
+		 ANDI R17, 0X0F ; LAY BCD NGAN
+		 ST X+, R17
+
+		 RET
+
+;--------------------------------------------------
+SCAN_4LA: 
+                  RCALL BCD_UNP
+                  LDI R18, 4 ; SO LAN QUET LED
+                  LDI R19, 0XFE ; 1111 1110 LED 0 BAT DAU
+		  LDI XH, HIGH(SR_ADR)
+		  LDI XL, LOW(SR_ADR)
+LOOP: 
+              LDI R17, 0XFF ; LAM TOI CAC DEN
+              OUT LED, R17
+	      SBI PORTC, 1 ; MO U3
+	      CBI PORTC, 1 ; KHOA U3
+
+	      LD R17, X+ ; NAP SO BCD TU SRAM
+	      RCALL GET_7SEG ; LAY MA 7 DOAN
+	      OUT LED, R17 ; XUAT MA 7 DOAN
+	      SBI PORTC, 0 ; MO U2
+	      CBI PORTC, 0 ; KHOA U2
+
+	      OUT LED, R19 ; XUAT MA QUET LED O U3
+	      SBI PORTC, 1 ; MO U3
+	      CBI PORTC, 1 ; KHOA U3
+
+	      LDI R16, 20
+	      RCALL DELAY_US
+	      SEC ; C = 1 CHUAN BI QUAY TRAI
+	      ROL R19 ; MA QUET LED KE TIEP
+	      DEC R18
+	      BRNE LOOP ; QUAY LAI LOOP KHI CHUA QUET DU 4 LAN
+	      RET

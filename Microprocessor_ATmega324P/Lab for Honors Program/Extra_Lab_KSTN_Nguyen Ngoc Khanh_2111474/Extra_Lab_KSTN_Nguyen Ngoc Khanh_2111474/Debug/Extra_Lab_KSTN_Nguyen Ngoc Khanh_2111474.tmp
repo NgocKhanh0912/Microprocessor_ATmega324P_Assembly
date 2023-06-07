@@ -1,0 +1,90 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega324PA"</DEVICE>
+ <WORKING_DIR>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m324PAdef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Debug\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474.map</FILE>
+  <FILE>Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <START><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>202</LINE></START>
+  <INT0_ISR><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>1331</LINE></INT0_ISR>
+  <INT1_ISR><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>1391</LINE></INT1_ISR>
+  <INT2_ISR><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>1450</LINE></INT2_ISR>
+  <DELAY_128US><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>1309</LINE></DELAY_128US>
+  <OUT_LCD4><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>723</LINE></OUT_LCD4>
+  <INIT_LCD4><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>699</LINE></INIT_LCD4>
+  <USART_INIT><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>779</LINE></USART_INIT>
+  <DON_GIA_MIT_GIA><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>268</LINE></DON_GIA_MIT_GIA>
+  <HIEN_THI_1><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>274</LINE></HIEN_THI_1>
+  <USART_TRANS><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>796</LINE></USART_TRANS>
+  <NHAP_DON_GIA_1><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>332</LINE></NHAP_DON_GIA_1>
+  <USART_REC><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>807</LINE></USART_REC>
+  <DON_GIA_MIT_NGON><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>343</LINE></DON_GIA_MIT_NGON>
+  <HIEN_THI_2><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>349</LINE></HIEN_THI_2>
+  <NHAP_DON_GIA_2><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>410</LINE></NHAP_DON_GIA_2>
+  <DON_GIA_MIT_GAN_CHIN><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>420</LINE></DON_GIA_MIT_GAN_CHIN>
+  <HIEN_THI_3><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>426</LINE></HIEN_THI_3>
+  <NHAP_DON_GIA_3><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>499</LINE></NHAP_DON_GIA_3>
+  <DON_GIA_MIT_NON><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>510</LINE></DON_GIA_MIT_NON>
+  <HIEN_THI_4><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>516</LINE></HIEN_THI_4>
+  <NHAP_DON_GIA_4><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>574</LINE></NHAP_DON_GIA_4>
+  <MAIN><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>584</LINE></MAIN>
+  <RUN_ADC><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>594</LINE></RUN_ADC>
+  <WAIT><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>598</LINE></WAIT>
+  <PHAN_LOAI_MIT><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>614</LINE></PHAN_LOAI_MIT>
+  <MIT_GIA><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>648</LINE></MIT_GIA>
+  <MIT_GIA_HOAC_MIT_NGON><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>628</LINE></MIT_GIA_HOAC_MIT_NGON>
+  <MIT_NGON_HOAC_MIT_GAN_CHIN><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>635</LINE></MIT_NGON_HOAC_MIT_GAN_CHIN>
+  <MIT_GAN_CHIN_HOAC_MIT_NON><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>642</LINE></MIT_GAN_CHIN_HOAC_MIT_NON>
+  <MIT_NGON><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>659</LINE></MIT_NGON>
+  <MIT_GAN_CHIN><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>670</LINE></MIT_GAN_CHIN>
+  <MIT_NON><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>681</LINE></MIT_NON>
+  <LAY_BCD_SO_KG><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>1071</LINE></LAY_BCD_SO_KG>
+  <TINH_DON_GIA_MIT_GIA><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>819</LINE></TINH_DON_GIA_MIT_GIA>
+  <LAY_BCD_DON_GIA><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>980</LINE></LAY_BCD_DON_GIA>
+  <TINH_TIEN><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>1152</LINE></TINH_TIEN>
+  <LAY_BCD_GIA_TIEN><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>1181</LINE></LAY_BCD_GIA_TIEN>
+  <TINH_DON_GIA_MIT_NGON><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>856</LINE></TINH_DON_GIA_MIT_NGON>
+  <TINH_DON_GIA_MIT_GAN_CHIN><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>894</LINE></TINH_DON_GIA_MIT_GAN_CHIN>
+  <TINH_DON_GIA_MIT_NON><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>932</LINE></TINH_DON_GIA_MIT_NON>
+  <OUT_LCD><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>738</LINE></OUT_LCD>
+  <CURS_POS><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>768</LINE></CURS_POS>
+  <DIV2><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>1042</LINE></DIV2>
+  <GT_DV2><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>1045</LINE></GT_DV2>
+  <LT_DV2><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>1050</LINE></LT_DV2>
+  <DIV1><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>1125</LINE></DIV1>
+  <GT_DV1><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>1128</LINE></GT_DV1>
+  <LT_DV1><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>1133</LINE></LT_DV1>
+  <MULTI><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>1156</LINE></MULTI>
+  <DIV3><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>1260</LINE></DIV3>
+  <LOOP><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>1264</LINE></LOOP>
+  <LP1><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>1268</LINE></LP1>
+  <LP2><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>1271</LINE></LP2>
+  <OCF1A_FLAG_1><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>1316</LINE></OCF1A_FLAG_1>
+  <LINE1_0><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>1349</LINE></LINE1_0>
+  <DOWN_0><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>1361</LINE></DOWN_0>
+  <LINE2_0><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>1368</LINE></LINE2_0>
+  <STOP_0><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>1377</LINE></STOP_0>
+  <LINE1_1><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>1409</LINE></LINE1_1>
+  <DOWN_1><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>1421</LINE></DOWN_1>
+  <LINE2_1><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>1428</LINE></LINE2_1>
+  <STOP_1><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>1437</LINE></STOP_1>
+  <LOOP1><FILE>D:\Microprocessor ATmega324P Projects\Extra Lab\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\Extra_Lab_KSTN_Nguyen Ngoc Khanh_2111474\main.asm</FILE><LINE>1491</LINE></LOOP1>
+ </LABELS>
+</ASSEMBLER_INFO>

@@ -1,0 +1,41 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega324PA"</DEVICE>
+ <WORKING_DIR>D:\Microprocessor ATmega324P Projects\LAB 1\LAB 1_3.1.1_Nguyen Ngoc Khanh_2111474\LAB 1_3.1.1_Nguyen Ngoc Khanh\LAB 1_3.1.1_Nguyen Ngoc Khanh\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>D:\Microprocessor ATmega324P Projects\LAB 1\LAB 1_3.1.1_Nguyen Ngoc Khanh_2111474\LAB 1_3.1.1_Nguyen Ngoc Khanh\LAB 1_3.1.1_Nguyen Ngoc Khanh\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\avrasm\inc\m324PAdef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>D:\Microprocessor ATmega324P Projects\LAB 1\LAB 1_3.1.1_Nguyen Ngoc Khanh_2111474\LAB 1_3.1.1_Nguyen Ngoc Khanh\LAB 1_3.1.1_Nguyen Ngoc Khanh\Debug\LAB 1_3.1.1_Nguyen Ngoc Khanh.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>LAB 1_3.1.1_Nguyen Ngoc Khanh.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>LAB 1_3.1.1_Nguyen Ngoc Khanh.map</FILE>
+  <FILE>LAB 1_3.1.1_Nguyen Ngoc Khanh.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <MAIN><FILE>D:\Microprocessor ATmega324P Projects\LAB 1\LAB 1_3.1.1_Nguyen Ngoc Khanh_2111474\LAB 1_3.1.1_Nguyen Ngoc Khanh\LAB 1_3.1.1_Nguyen Ngoc Khanh\main.asm</FILE><LINE>27</LINE></MAIN>
+  <DELAY_US><FILE>D:\Microprocessor ATmega324P Projects\LAB 1\LAB 1_3.1.1_Nguyen Ngoc Khanh_2111474\LAB 1_3.1.1_Nguyen Ngoc Khanh\LAB 1_3.1.1_Nguyen Ngoc Khanh\main.asm</FILE><LINE>205</LINE></DELAY_US>
+  <OUT_LCD4><FILE>D:\Microprocessor ATmega324P Projects\LAB 1\LAB 1_3.1.1_Nguyen Ngoc Khanh_2111474\LAB 1_3.1.1_Nguyen Ngoc Khanh\LAB 1_3.1.1_Nguyen Ngoc Khanh\main.asm</FILE><LINE>154</LINE></OUT_LCD4>
+  <INIT_LCD4><FILE>D:\Microprocessor ATmega324P Projects\LAB 1\LAB 1_3.1.1_Nguyen Ngoc Khanh_2111474\LAB 1_3.1.1_Nguyen Ngoc Khanh\LAB 1_3.1.1_Nguyen Ngoc Khanh\main.asm</FILE><LINE>131</LINE></INIT_LCD4>
+  <START><FILE>D:\Microprocessor ATmega324P Projects\LAB 1\LAB 1_3.1.1_Nguyen Ngoc Khanh_2111474\LAB 1_3.1.1_Nguyen Ngoc Khanh\LAB 1_3.1.1_Nguyen Ngoc Khanh\main.asm</FILE><LINE>72</LINE></START>
+  <OUT_LCD><FILE>D:\Microprocessor ATmega324P Projects\LAB 1\LAB 1_3.1.1_Nguyen Ngoc Khanh_2111474\LAB 1_3.1.1_Nguyen Ngoc Khanh\LAB 1_3.1.1_Nguyen Ngoc Khanh\main.asm</FILE><LINE>167</LINE></OUT_LCD>
+  <CURS_POS><FILE>D:\Microprocessor ATmega324P Projects\LAB 1\LAB 1_3.1.1_Nguyen Ngoc Khanh_2111474\LAB 1_3.1.1_Nguyen Ngoc Khanh\LAB 1_3.1.1_Nguyen Ngoc Khanh\main.asm</FILE><LINE>193</LINE></CURS_POS>
+  <TAB><FILE>D:\Microprocessor ATmega324P Projects\LAB 1\LAB 1_3.1.1_Nguyen Ngoc Khanh_2111474\LAB 1_3.1.1_Nguyen Ngoc Khanh\LAB 1_3.1.1_Nguyen Ngoc Khanh\main.asm</FILE><LINE>221</LINE></TAB>
+  <LINE1><FILE>D:\Microprocessor ATmega324P Projects\LAB 1\LAB 1_3.1.1_Nguyen Ngoc Khanh_2111474\LAB 1_3.1.1_Nguyen Ngoc Khanh\LAB 1_3.1.1_Nguyen Ngoc Khanh\main.asm</FILE><LINE>89</LINE></LINE1>
+  <DOWN><FILE>D:\Microprocessor ATmega324P Projects\LAB 1\LAB 1_3.1.1_Nguyen Ngoc Khanh_2111474\LAB 1_3.1.1_Nguyen Ngoc Khanh\LAB 1_3.1.1_Nguyen Ngoc Khanh\main.asm</FILE><LINE>100</LINE></DOWN>
+  <LINE2><FILE>D:\Microprocessor ATmega324P Projects\LAB 1\LAB 1_3.1.1_Nguyen Ngoc Khanh_2111474\LAB 1_3.1.1_Nguyen Ngoc Khanh\LAB 1_3.1.1_Nguyen Ngoc Khanh\main.asm</FILE><LINE>107</LINE></LINE2>
+  <WAIT><FILE>D:\Microprocessor ATmega324P Projects\LAB 1\LAB 1_3.1.1_Nguyen Ngoc Khanh_2111474\LAB 1_3.1.1_Nguyen Ngoc Khanh\LAB 1_3.1.1_Nguyen Ngoc Khanh\main.asm</FILE><LINE>116</LINE></WAIT>
+  <HERE><FILE>D:\Microprocessor ATmega324P Projects\LAB 1\LAB 1_3.1.1_Nguyen Ngoc Khanh_2111474\LAB 1_3.1.1_Nguyen Ngoc Khanh\LAB 1_3.1.1_Nguyen Ngoc Khanh\main.asm</FILE><LINE>119</LINE></HERE>
+  <L1><FILE>D:\Microprocessor ATmega324P Projects\LAB 1\LAB 1_3.1.1_Nguyen Ngoc Khanh_2111474\LAB 1_3.1.1_Nguyen Ngoc Khanh\LAB 1_3.1.1_Nguyen Ngoc Khanh\main.asm</FILE><LINE>208</LINE></L1>
+  <L2><FILE>D:\Microprocessor ATmega324P Projects\LAB 1\LAB 1_3.1.1_Nguyen Ngoc Khanh_2111474\LAB 1_3.1.1_Nguyen Ngoc Khanh\LAB 1_3.1.1_Nguyen Ngoc Khanh\main.asm</FILE><LINE>210</LINE></L2>
+ </LABELS>
+</ASSEMBLER_INFO>
