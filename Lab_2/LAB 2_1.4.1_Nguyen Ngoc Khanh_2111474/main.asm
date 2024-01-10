@@ -1,0 +1,44 @@
+;
+; LAB 2_1.4.1_Nguyen Ngoc Khanh.asm
+;
+; Created: 5/6/2023 1:44:57 PM
+; 
+;
+; Viet chuong trinh tao xung vuong tan so 1k Hz, duty cycle 25%
+
+                   .ORG 0
+		   RJMP MAIN
+		   .ORG 0X40 ; DUA CHUONG TRINH CHINH RA KHOI VUNG INTERRUPTS
+MAIN:  
+           LDI R16, HIGH(RAMEND)
+           OUT SPH, R16
+	   LDI R16, LOW(RAMEND)
+	   OUT SPL, R16 ; DUA STACK LEN VUNG DIA CHI CAO
+
+	   LDI R16, 0X10
+	   OUT DDRB, R16 ; PB4 OUTPUT
+	   LDI R17, 0X00 
+	   OUT TCCR0A, R17 ; TIMER 0 MODE NOR
+	   LDI R17, 0X00
+	   OUT TCCR0B, R17 ; MODE NOR STOP
+START: 
+           SBI PORTB, 4 ; MUC CAO CUA XUNG VUONG
+           LDI R17, -31 ; DUTY CYCLE 25% 
+	   RCALL DELAY8US
+	   CBI PORTB, 4 ; MUC THAP CUA XUNG VUONG
+	   LDI R17, -94 ; MUC THAP CHIEM 75% CHU KI
+	   RCALL DELAY8US
+	   RJMP START
+
+
+;-------------------------------------------------------
+DELAY8US: OUT TCNT0, R17 ; NAP GIA TRI BAN DAU
+          LDI R17, 0X03 ; RUN, CHIA 64
+          OUT TCCR0B, R17
+WAIT:     IN R17, TIFR0 ; DOC CO BAO TRAN
+          SBRS R17, TOV0
+	  RJMP WAIT ; NEU CHUA TRAN, NHAY LAI WAIT
+	  OUT TIFR0, R17 ; XOA CO BAO TRAN
+	  LDI R17, 0X00 ; STOP
+	  OUT TCCR0B, R17
+	  RET
