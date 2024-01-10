@@ -1,0 +1,53 @@
+;
+; LAB 4_1.2.1_Nguyen Ngoc Khanh.asm
+;
+; Created: 5/7/2023 2:40:15 AM
+; 
+;
+; tao xung tan so 100 Hz tren chan PC0 su dung timer 1 o mode CTC, su dung COMPARE_MATCH interrupt
+
+                   .ORG 0
+		   RJMP MAIN
+		   .ORG 0X001A
+		   RJMP COMPARE_MATCH ; INTERRUPTS SO SANH KENH 1A
+		   .ORG 0X40 ; DUA CHUONG TRINH RA KHOI VUNG INTERRUPTS
+MAIN:  
+           LDI R16, HIGH(RAMEND)
+           OUT SPH, R16
+	   LDI R16, LOW(RAMEND)
+	   OUT SPL, R16 ; DUA STACK LEN VUNG DIA CHI CAO
+
+	   LDI R16, 0X01
+	   OUT DDRC, R16 ; PC0 OUTPUT 
+
+	   LDI R17, HIGH(39999) ; 100Hz = 0.01s , 5ms = 40000 xung , moi xung 0.125us
+	   STS OCR1AH, R17
+	   LDI R17, LOW(39999) ; 40000 - 1 XUNG DOI NGAT
+	   STS OCR1AL, R17
+
+	   LDI R17, 0X00 
+	   STS TCCR1A, R17 ; TIMER 1
+	   LDI R17, 0X09
+	   STS TCCR1B, R17 ; MODE CTC KHONG CHIA START
+
+           SEI ; CHO PHEP NGAT TOAN CUC
+	   LDI R17, (1 << OCIE1A) ; CHO PHEP NGAT KHI TIMER1 TRAN
+	   STS TIMSK1, R17
+START:     RJMP START
+
+;-----------------------------------------------------------------------
+COMPARE_MATCH: 
+           LDI R17, 0X00
+	   STS TCCR1B, R17 ; DUNG TIMER1
+
+	   LDI R17, HIGH(39999) 
+	   STS OCR1AH, R17
+	   LDI R17, LOW(39999) ; NAP OCR1A
+	   STS OCR1AL, R17
+
+	   IN R17, PORTC ; DOC PORTC
+	   EOR R17, R16 ; DAO BIT CHAN PC0 VOI R16 = 0X01
+	   OUT PORTC, R17
+	   LDI R17, 0X09
+	   STS TCCR1B, R17 ; MODE CTC KHONG CHIA START
+	   RETI
